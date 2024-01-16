@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import "./Controller.css";
 import ControllerImg from "./Images/controller.png";
 import axios from "axios";
+import { useParams } from "react-router-dom";
 
 function Controller() {
-  const id = "65a36e1741792a13854f33d0";
+  const { id } = useParams();
+  const ipaddress = "192.168.192.191";
   const [teamname, setteamname] = useState("");
   const [teampoints, setteampoints] = useState(0);
 
@@ -12,13 +14,14 @@ function Controller() {
     const fetchTeam = async () => {
       try {
         const response = await axios.get(
-          `http://192.168.192.191:8005/teamdetails/${id}`
+          `http://${ipaddress}:8005/teamdetails/${id}`
         );
         setteamname(response.data.Team.name);
         setteampoints(response.data.Team.points);
         console.log(response.data.Team.name);
       } catch (error) {
         console.log(error);
+        return "Internal server error";
       }
     };
 

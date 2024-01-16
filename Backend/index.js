@@ -3,7 +3,6 @@ const express = require('express');
 const app = express();
 const cors = require('cors'); // Fix typo here
 const mongoose = require('mongoose');
-
 const MongoDBUrl = 'mongodb://127.0.0.1:27017/leaderboard';
 
 app.use(express.json());
@@ -13,15 +12,17 @@ app.use(cors());
 // Database Connection
 async function connectToDatabase() {
   try {
-    await mongoose.connect(MongoDBUrl, { useNewUrlParser: true, useUnifiedTopology: true });
+    await mongoose.connect(MongoDBUrl, {
+    });
     console.log('Successfully connected to MongoDB');
   } catch (error) {
     console.error('Error connecting to MongoDB:', error.message);
-    process.exit(1); // Terminate the application on database connection error
+    process.exit(1); 
   }
 }
 
 connectToDatabase();
+
 
 // Data Model Schemas
 const gameSchema = new mongoose.Schema({
