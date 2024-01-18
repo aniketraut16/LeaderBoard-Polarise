@@ -1,0 +1,117 @@
+h1{
+    text-align: center;
+    font-size:80px ;
+    margin-top: -85px;
+    margin-bottom: 4px;
+}
+.backg{
+  height: 100vh;
+    width: 100vw;
+    background: url('./Images/controller-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(250, 248, 248);
+    font-family: 'Permanent Marker', cursive;
+
+}
+
+.scoreboard tr {
+    height: 47px;
+    width: 600px;
+    display: flex;
+    justify-content: space-around;
+    margin: 10px auto;
+    align-items: center;
+    margin-left: -26px;
+    font-size: 22px;
+  }
+  #t2{
+    margin-left: -35px;
+  }
+  #t1{
+    margin-left: -10px;
+  }
+  .scoreboard{
+   
+        border-collapse: collapse;
+        background: linear-gradient(#8bf0f3, #5d69e6); 
+        letter-spacing: 1px;
+        color: rgb(252, 250, 250);
+        border-radius: 30px;
+        font-family:Arial, Helvetica, sans-serif;
+        font-size:1rem;
+        box-shadow: 5px 2px 10px 5px rgb(137, 137, 241);
+    position: relative;
+      
+  }
+  #t1 , #t2 ,#t3{
+  font-weight: bolder;
+  color: rgb(156, 137, 137);
+  font-family: 'Permanent Marker', cursive;
+  font-size: 30px;
+  }
+  .blue{
+    height: 80%;
+    width: 85%;
+    margin-left: 20px;
+    background: linear-gradient(#e28bf3, #e872f3); 
+    border-radius: 20px;
+    box-shadow: 5px 2px 10px 5px rgb(252, 252, 253);
+  }
+  #text{
+    padding: 5px;
+    padding-left: 30px;
+    color: white;
+    position: absolute;
+  }
+  #text p{
+    color: yellow;
+    display: inline;
+   font-size: 30px;
+  }
+#text1{
+  padding-left: 209px;
+ display: inline;
+}
+
+#text2{
+  padding-left: 190px;
+}
+#text2 p{
+   color: yellow;
+    display: inline;
+}
+
+
+
+ /* .team {
+    text-align: center;
+  }
+  
+  .team h2 {
+    margin-bottom: 10px;
+  }
+  
+  .team p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    font-size: 16px;
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+    backdrop-filter: blur(1rem);
+    border-radius: 5rem;
+    transition: 0.5s;
+    animation: gradient_301 5s ease infinite;
+    border: double 4px transparent;
+    background-image: linear-gradient(#f3eded, #fcf6f6);
+  }*/
+  
