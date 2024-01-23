@@ -4,9 +4,9 @@ import ControllerImg from "./Images/controller.png";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 
-function Controller() {
+function Controller(props) {
+  const { ipaddress } = props;
   const { id } = useParams();
-  const ipaddress = "192.168.192.191";
   const [teamname, setteamname] = useState("");
   const [teampoints, setteampoints] = useState(0);
 
@@ -30,7 +30,7 @@ function Controller() {
 
   const updatePoints = async () => {
     try {
-      await axios.put(`http://192.168.192.191:8005/updateteam`, {
+      await axios.put(`http://${ipaddress}:8005/updateteam`, {
         id,
         points: teampoints,
       });
